@@ -27,6 +27,30 @@ body {
   background: var(--bg-light);
 }
 
+/* Image Loading Optimization */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[loading="lazy"] {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: loading 1.5s infinite;
+  min-height: 100px;
+}
+
+@keyframes loading {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+img[loading="lazy"].loaded {
+  animation: none;
+  background: transparent;
+}
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
