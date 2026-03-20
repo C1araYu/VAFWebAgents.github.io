@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How do Visual Attributes Influence Web Agents? A Comprehensive Evaluation of User Interface Design Factors</title>
+    <meta name="description" content="A comprehensive evaluation of how user interface design factors influence web agent behavior across multiple visual attributes" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <header class="hero">
+      <div class="container">
+        <h1 class="title">How do Visual Attributes Influence Web Agents?</h1>
+        <h2 class="subtitle">A Comprehensive Evaluation of User Interface Design Factors</h2>
+        
+        <!-- Authors -->
+        <div class="authors">
+          <span class="author">Kuai Yu<sup>2</sup></span>
+          <span class="author">Naicheng Yu<sup>3</sup></span>
+          <span class="author">Han Wang<sup>1</sup></span>
+          <span class="author">Rui Yang<sup>1</sup></span>
+          <span class="author">Huan Zhang<sup>1</sup></span>
+        </div>
+        
+        <!-- Affiliations -->
+        <div class="affiliations">
+          <div class="affiliation"><sup>1</sup>University of Illinois Urbana-Champaign</div>
+          <div class="affiliation"><sup>2</sup>Columbia University</div>
+          <div class="affiliation"><sup>3</sup>University of California San Diego</div>
+        </div>
+        
+        <!-- Links -->
+        <div class="links">
+          <a href="https://arxiv.org/abs/2601.21961" class="btn" target="_blank" rel="noreferrer">
+            <i class="fas fa-file-pdf"></i> Paper
+          </a>
+          <a href="#" class="btn" target="_blank" rel="noreferrer">
+            <i class="fab fa-github"></i> Code
+          </a>
+          <a href="#" class="btn" target="_blank" rel="noreferrer">
+            <i class="fas fa-database"></i> Data
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Abstract Section -->
+    <section class="section abstract-section">
+      <div class="container">
+        <h2>Abstract</h2>
+        <p class="abstract-text">
+          The rapid development of web agents has led to increasing reliance from both individuals and enterprises. 
+          While large language and vision-language models that power these agents are predominantly text-driven, 
+          most robustness studies have focused narrowly on text-based vulnerabilities such as prompt injection. 
+          However, as visual input becomes an integral component of web agents, the influence of visual elements 
+          on their behavior remains underexplored. In this work, we introduce <strong>WebAgentsLook</strong>, 
+          a systematic pipeline that automatically generates HTML variants by modifying CSS attributes, including 
+          color, typography, position, and their combinations. By evaluating multiple web agents on these variants, 
+          we uncover novel insights into how visual elements guide or mislead agent decisions. Our evaluation 
+          combines coordinate-based action tracing with semantic analysis, and we propose a comprehensive metric 
+          to quantify task success, defined by whether the agent correctly selects the intended target.
+        </p>
+      </div>
+    </section>
+
+    <!-- Method Overview -->
+    <section class="section method-section">
+      <div class="container">
+        <h2>Method Overview</h2>
+        <div class="method-content">
+          <!-- Embedded PDF Viewer -->
+          <div class="pdf-container">
+            <iframe src="images/workflow_newnew.pdf" class="pdf-viewer" title="WebAgentsLook Pipeline"></iframe>
+            <p class="pdf-caption">
+              <a href="images/workflow_newnew.pdf" target="_blank" class="pdf-link">
+                <i class="fas fa-external-link-alt"></i> Open PDF in new tab
+              </a>
+            </p>
+          </div>
+          <p class="method-description">
+            Our pipeline consists of three main phases:
+          </p>
+          <ol class="method-steps">
+            <li>
+              <strong>Variant Generation:</strong> Automatically generate HTML variants by modifying CSS attributes 
+              (color, position, typography, size) while preserving semantic content.
+            </li>
+            <li>
+              <strong>Realistic Browsing Simulation:</strong> Simulate realistic web browsing with viewport-based 
+              scrolling and interaction, mirroring how humans navigate web pages.
+            </li>
+            <li>
+              <strong>Dual Evaluation:</strong> Assess agent behavior using both coordinate-based click accuracy 
+              and semantic understanding metrics.
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- Key Findings -->
+    <section class="section findings-section">
+      <div class="container">
+        <h2>Key Findings</h2>
+        <div class="findings-grid">
+          <div class="finding-card">
+            <div class="finding-icon">🎨</div>
+            <h3>Color Influence</h3>
+            <p>
+              Color variations exert the strongest influence on agent choices. Agents show significant 
+              sensitivity to color changes, similar to human visual attention patterns.
+            </p>
+          </div>
+          
+          <div class="finding-card">
+            <div class="finding-icon">📍</div>
+            <h3>Positional Bias</h3>
+            <p>
+              Agents exhibit strong positional bias, preferring early-appearing items on a page. 
+              Moving target items to lower positions dramatically reduces selection probability.
+            </p>
+          </div>
+          
+          <div class="finding-card">
+            <div class="finding-icon">🔍</div>
+            <h3>Text-Dominant Attention</h3>
+            <p>
+              Current VLM-based agents tend to focus disproportionately on textual/OCR signals, 
+              showing weaker robustness to purely visual changes compared to humans.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Results Visualization -->
+    <section class="section results-section">
+      <div class="container">
+        <h2>Results</h2>
+        
+        <!-- Main Results: Success Rate Heatmap -->
+        <div class="result-block">
+          <h3>Variant Success Rate Analysis</h3>
+          <p class="result-intro">
+            Comprehensive analysis showing how different visual attributes affect agent performance 
+            across multiple scenarios (Amazon, Booking, eBay, NPR, Expedia).
+          </p>
+          <div class="pdf-container">
+            <iframe src="images/heatmap_pvalue.pdf" class="pdf-viewer" title="Success Rate Heatmap"></iframe>
+            <p class="pdf-caption">
+              <a href="images/heatmap_pvalue.pdf" target="_blank" class="pdf-link">
+                <i class="fas fa-external-link-alt"></i> Open full resolution PDF
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Click Distribution Across Scenarios -->
+        <div class="result-block">
+          <h3>Click Distribution Heatmaps Across Scenarios</h3>
+          <div class="image-grid-3">
+            <div class="result-image">
+              <img src="images/click_heatmap_booking_first_original.png" alt="Booking.com Click Distribution" />
+              <p class="caption">Booking.com - Original Page</p>
+            </div>
+            <div class="result-image">
+              <img src="images/click_heatmap_ebay2_original_updated.png" alt="eBay Click Distribution" />
+              <p class="caption">eBay - Click Heatmap</p>
+            </div>
+            <div class="result-image">
+              <img src="images/click_heatmap_npr_original.png" alt="NPR Click Distribution" />
+              <p class="caption">NPR - Click Heatmap</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Agent Performance Visualizations -->
+        <div class="result-block">
+          <h3>Agent Click Distribution by Scenario</h3>
+          <div class="image-grid">
+            <div class="result-image">
+              <img src="images/amazon_top_click_distribution.png" alt="Amazon Click Distribution" />
+              <p class="caption">Amazon - Click Distribution</p>
+            </div>
+            <div class="result-image">
+              <img src="images/expedia_top_click_distribution.png" alt="Expedia Click Distribution" />
+              <p class="caption">Expedia - Click Distribution</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Best vs Worst Variants Comparison -->
+        <div class="result-block">
+          <h3>Variant Performance Comparison</h3>
+          <p class="result-intro">
+            Comparison between the most effective (Best) and least effective (Worst) visual variants 
+            in influencing agent decisions.
+          </p>
+          <div class="image-grid">
+            <div class="result-image">
+              <img src="images/HEATMAP_BEST.png" alt="Best Performing Variants" />
+              <p class="caption">Top 10 Best Performing Variants</p>
+            </div>
+            <div class="result-image">
+              <img src="images/HEATMAP_WORST.png" alt="Worst Performing Variants" />
+              <p class="caption">Top 10 Worst Performing Variants</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Booking Analysis -->
+        <div class="result-block">
+          <h3>Detailed Analysis: Booking.com</h3>
+          <div class="single-image">
+            <img src="images/click_heatmap_booking_first_original_comprehensive.png" alt="Booking Comprehensive Analysis" />
+            <p class="caption">Comprehensive click distribution analysis on Booking.com showing agent attention patterns</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Citation Section -->
+    <section class="section citation-section">
+      <div class="container">
+        <h2>Citation</h2>
+        <div class="bibtex-container">
+          <pre><code>@misc{yu2026visualattributesinfluenceweb,
+  title={How do Visual Attributes Influence Web Agents? A Comprehensive Evaluation of User Interface Design Factors}, 
+  author={Kuai Yu and Naicheng Yu and Han Wang and Rui Yang and Huan Zhang},
+  year={2026},
+  eprint={2601.21961},
+  archivePrefix={arXiv},
+  primaryClass={cs.AI},
+  url={https://arxiv.org/abs/2601.21961}
+}</code></pre>
+          <button class="copy-btn" onclick="copyBibtex()">
+            <i class="fas fa-copy"></i> Copy
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>© 2026 Kuai Yu, Naicheng Yu, Han Wang, Rui Yang, Huan Zhang</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
