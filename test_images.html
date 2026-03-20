@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>图片显示测试</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; max-width: 1200px; margin: 0 auto; }
+    h1 { color: #2563eb; }
+    .test-item { margin: 20px 0; padding: 15px; background: #f9fafb; border-radius: 8px; border-left: 3px solid #2563eb; }
+    .status { padding: 4px 8px; border-radius: 4px; font-weight: bold; }
+    .success { background: #d1fae5; color: #065f46; }
+    .error { background: #fee2e2; color: #991b1b; }
+    img { max-width: 100%; height: auto; border: 1px solid #ddd; margin-top: 10px; }
+    iframe { width: 100%; height: 400px; border: 1px solid #ddd; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>🔍 图片和PDF显示测试</h1>
+  <p>此页面用于测试所有图片和PDF文件是否能正确加载。</p>
+
+  <div class="test-item">
+    <h3>1. Workflow PDF <span class="status success" id="status-workflow">测试中...</span></h3>
+    <p>路径: <code>images/workflow_newnew.pdf</code></p>
+    <iframe src="images/workflow_newnew.pdf" onload="document.getElementById('status-workflow').textContent='✓ 加载成功'" onerror="document.getElementById('status-workflow').className='status error'; document.getElementById('status-workflow').textContent='✗ 加载失败'"></iframe>
+  </div>
+
+  <div class="test-item">
+    <h3>2. Heatmap P-value PDF <span class="status success" id="status-heatmap">测试中...</span></h3>
+    <p>路径: <code>images/heatmap_pvalue.pdf</code></p>
+    <iframe src="images/heatmap_pvalue.pdf" onload="document.getElementById('status-heatmap').textContent='✓ 加载成功'" onerror="document.getElementById('status-heatmap').className='status error'; document.getElementById('status-heatmap').textContent='✗ 加载失败'"></iframe>
+  </div>
+
+  <div class="test-item">
+    <h3>3. Booking Click Heatmap <span class="status success" id="status-booking">测试中...</span></h3>
+    <p>路径: <code>images/click_heatmap_booking_first_original.png</code></p>
+    <img src="images/click_heatmap_booking_first_original.png" alt="Booking Heatmap" onload="document.getElementById('status-booking').textContent='✓ 加载成功'" onerror="document.getElementById('status-booking').className='status error'; document.getElementById('status-booking').textContent='✗ 加载失败'">
+  </div>
+
+  <div class="test-item">
+    <h3>4. eBay Click Heatmap <span class="status success" id="status-ebay">测试中...</span></h3>
+    <p>路径: <code>images/click_heatmap_ebay2_original_updated.png</code></p>
+    <img src="images/click_heatmap_ebay2_original_updated.png" alt="eBay Heatmap" onload="document.getElementById('status-ebay').textContent='✓ 加载成功'" onerror="document.getElementById('status-ebay').className='status error'; document.getElementById('status-ebay').textContent='✗ 加载失败'">
+  </div>
+
+  <div class="test-item">
+    <h3>5. NPR Click Heatmap <span class="status success" id="status-npr">测试中...</span></h3>
+    <p>路径: <code>images/click_heatmap_npr_original.png</code></p>
+    <img src="images/click_heatmap_npr_original.png" alt="NPR Heatmap" onload="document.getElementById('status-npr').textContent='✓ 加载成功'" onerror="document.getElementById('status-npr').className='status error'; document.getElementById('status-npr').textContent='✗ 加载失败'">
+  </div>
+
+  <div class="test-item">
+    <h3>6. Amazon Distribution <span class="status success" id="status-amazon">测试中...</span></h3>
+    <p>路径: <code>images/amazon_top_click_distribution.png</code></p>
+    <img src="images/amazon_top_click_distribution.png" alt="Amazon Distribution" onload="document.getElementById('status-amazon').textContent='✓ 加载成功'" onerror="document.getElementById('status-amazon').className='status error'; document.getElementById('status-amazon').textContent='✗ 加载失败'">
+  </div>
+
+  <div class="test-item">
+    <h3>7. Expedia Distribution <span class="status success" id="status-expedia">测试中...</span></h3>
+    <p>路径: <code>images/expedia_top_click_distribution.png</code></p>
+    <img src="images/expedia_top_click_distribution.png" alt="Expedia Distribution" onload="document.getElementById('status-expedia').textContent='✓ 加载成功'" onerror="document.getElementById('status-expedia').className='status error'; document.getElementById('status-expedia').textContent='✗ 加载失败'">
+  </div>
+
+  <div class="test-item">
+    <h3>8. Best Variants Heatmap <span class="status success" id="status-best">测试中...</span></h3>
+    <p>路径: <code>images/HEATMAP_BEST.png</code></p>
+    <img src="images/HEATMAP_BEST.png" alt="Best Variants" onload="document.getElementById('status-best').textContent='✓ 加载成功'" onerror="document.getElementById('status-best').className='status error'; document.getElementById('status-best').textContent='✗ 加载失败'">
+  </div>
+
+  <div class="test-item">
+    <h3>9. Worst Variants Heatmap <span class="status success" id="status-worst">测试中...</span></h3>
+    <p>路径: <code>images/HEATMAP_WORST.png</code></p>
+    <img src="images/HEATMAP_WORST.png" alt="Worst Variants" onload="document.getElementById('status-worst').textContent='✓ 加载成功'" onerror="document.getElementById('status-worst').className='status error'; document.getElementById('status-worst').textContent='✗ 加载失败'">
+  </div>
+
+  <div class="test-item">
+    <h3>10. Booking Comprehensive Analysis <span class="status success" id="status-comprehensive">测试中...</span></h3>
+    <p>路径: <code>images/click_heatmap_booking_first_original_comprehensive.png</code></p>
+    <img src="images/click_heatmap_booking_first_original_comprehensive.png" alt="Booking Comprehensive" onload="document.getElementById('status-comprehensive').textContent='✓ 加载成功'" onerror="document.getElementById('status-comprehensive').className='status error'; document.getElementById('status-comprehensive').textContent='✗ 加载失败'">
+  </div>
+
+  <hr style="margin: 40px 0;">
+  <h2>📝 诊断提示</h2>
+  <ul>
+    <li>如果所有项目显示"✓ 加载成功"，说明图片路径正确</li>
+    <li>如果有"✗ 加载失败"，检查 images 文件夹中是否有对应文件</li>
+    <li>PDF 在某些浏览器中可能显示为空白，这是正常的，点击"Open PDF in new tab"链接查看</li>
+    <li>按 Ctrl+Shift+R 强制刷新页面以清除缓存</li>
+  </ul>
+
+</body>
+</html>

@@ -51,16 +51,23 @@
       <div class="container">
         <h2>Abstract</h2>
         <p class="abstract-text">
-          The rapid development of web agents has led to increasing reliance from both individuals and enterprises. 
-          While large language and vision-language models that power these agents are predominantly text-driven, 
-          most robustness studies have focused narrowly on text-based vulnerabilities such as prompt injection. 
-          However, as visual input becomes an integral component of web agents, the influence of visual elements 
-          on their behavior remains underexplored. In this work, we introduce <strong>WebAgentsLook</strong>, 
-          a systematic pipeline that automatically generates HTML variants by modifying CSS attributes, including 
-          color, typography, position, and their combinations. By evaluating multiple web agents on these variants, 
-          we uncover novel insights into how visual elements guide or mislead agent decisions. Our evaluation 
-          combines coordinate-based action tracing with semantic analysis, and we propose a comprehensive metric 
-          to quantify task success, defined by whether the agent correctly selects the intended target.
+          Web agents have demonstrated strong performance on a wide range of web-based tasks. However, existing 
+          research on the effect of environmental variation has mostly focused on robustness to adversarial attacks, 
+          with less attention to agents' preferences in benign scenarios. Although early studies have examined how 
+          textual attributes influence agent behavior, a systematic understanding of how visual attributes shape 
+          agent decision-making remains limited. To address this, we introduce <strong>VAF</strong>, a controlled 
+          evaluation pipeline for quantifying how webpage <strong>V</strong>isual <strong>A</strong>ttribute 
+          <strong>F</strong>actors influence web-agent decision-making. Specifically, VAF consists of three stages: 
+          (i) variant generation, which ensures the variants share identical semantics as the original item while 
+          only differ in visual attributes; (ii) browsing interaction, where agents navigate the page via scrolling 
+          and clicking the interested item, mirroring how human users browse online; (iii) validating through both 
+          click action and reasoning from agents, which we use the Target Click Rate and Target Mention Rate to 
+          jointly evaluate the effect of visual attributes. By quantitatively measuring the decision-making difference 
+          between the original and variant, we identify which visual attributes influence agents' behavior most. 
+          Extensive experiments, across 8 variant families (48 variants total), 5 real-world websites (including 
+          shopping, travel, and news browsing), and 4 representative web agents, show that background color contrast, 
+          item size, position, and card clarity have a strong influence on agents' actions, whereas font styling, 
+          text color, and item image clarity exhibit minor effects.
         </p>
       </div>
     </section>
@@ -104,32 +111,75 @@
     <section class="section findings-section">
       <div class="container">
         <h2>Key Findings</h2>
+        <p class="result-intro" style="margin-bottom: 2.5rem;">
+          Our extensive experiments across <strong>8 variant families (48 variants total)</strong>, 
+          <strong>5 real-world websites</strong>, and <strong>4 representative web agents</strong> reveal:
+        </p>
         <div class="findings-grid">
           <div class="finding-card">
             <div class="finding-icon">🎨</div>
-            <h3>Color Influence</h3>
+            <h3>Strong Influence Factors</h3>
             <p>
-              Color variations exert the strongest influence on agent choices. Agents show significant 
-              sensitivity to color changes, similar to human visual attention patterns.
+              <strong>Background color contrast</strong>, <strong>item size</strong>, <strong>position</strong>, 
+              and <strong>card clarity</strong> have a strong influence on agents' actions and decision-making patterns.
             </p>
           </div>
           
           <div class="finding-card">
-            <div class="finding-icon">📍</div>
-            <h3>Positional Bias</h3>
+            <div class="finding-icon">📝</div>
+            <h3>Minor Influence Factors</h3>
             <p>
-              Agents exhibit strong positional bias, preferring early-appearing items on a page. 
-              Moving target items to lower positions dramatically reduces selection probability.
+              <strong>Font styling</strong>, <strong>text color</strong>, and <strong>item image clarity</strong> 
+              exhibit minor effects on agent behavior, suggesting current VLMs process text in abstracted forms.
             </p>
           </div>
           
           <div class="finding-card">
-            <div class="finding-icon">🔍</div>
-            <h3>Text-Dominant Attention</h3>
+            <div class="finding-icon">📊</div>
+            <h3>Evaluation Metrics</h3>
             <p>
-              Current VLM-based agents tend to focus disproportionately on textual/OCR signals, 
-              showing weaker robustness to purely visual changes compared to humans.
+              We use <strong>Target Click Rate</strong> and <strong>Target Mention Rate</strong> to jointly 
+              evaluate visual attribute effects, measuring both action and reasoning capabilities.
             </p>
+          </div>
+        </div>
+
+        <!-- Variant Families Overview -->
+        <div class="variant-overview" style="margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 12px;">
+          <h3 style="text-align: center; margin-bottom: 1.5rem;">8 Variant Families (48 Variants Total)</h3>
+          <div class="variant-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Background Color</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Color contrast variations</p>
+            </div>
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Item Size</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Different size scales</p>
+            </div>
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Position</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Spatial positioning</p>
+            </div>
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Card Clarity</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Visual saliency</p>
+            </div>
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Font Styling</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Typography changes</p>
+            </div>
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Text Color</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Text appearance</p>
+            </div>
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Image Clarity</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Visual quality</p>
+            </div>
+            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
+              <strong style="color: var(--primary-color);">Combinations</strong>
+              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Multi-attribute</p>
+            </div>
           </div>
         </div>
       </div>

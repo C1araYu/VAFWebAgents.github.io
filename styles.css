@@ -241,6 +241,48 @@ h3 {
   line-height: 1.6;
 }
 
+/* ===== Variant Overview Styles ===== */
+.variant-overview {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: var(--bg-light);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.variant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.variant-item {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--border-color);
+  transition: all 0.2s;
+}
+
+.variant-item:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: var(--primary-color);
+}
+
+.variant-item strong {
+  color: var(--primary-color);
+  font-size: 1rem;
+  display: block;
+}
+
+.variant-item p {
+  margin: 0.5rem 0 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
 /* ===== Results Section ===== */
 .result-block {
   margin: 3rem 0;
