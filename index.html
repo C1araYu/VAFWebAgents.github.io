@@ -144,42 +144,132 @@
           </div>
         </div>
 
-        <!-- Variant Families Overview -->
+        <!-- Variant Families Showcase with Examples -->
         <div class="variant-overview" style="margin-top: 3rem; padding: 2rem; background: var(--bg-light); border-radius: 12px;">
-          <h3 style="text-align: center; margin-bottom: 1.5rem;">8 Variant Families (48 Variants Total)</h3>
-          <div class="variant-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Background Color</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Color contrast variations</p>
+          <h3 style="text-align: center; margin-bottom: 2rem; font-size: 1.8rem;">8 Variant Families - Visual Examples</h3>
+          
+          <!-- Original Baseline -->
+          <div style="margin-bottom: 3rem; text-align: center;">
+            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">📍 Original (Baseline)</h4>
+            <img src="images/variants/original.png" alt="Original Page" style="max-width: 100%; border: 2px solid #ddd; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+          </div>
+
+          <!-- 1. Background Color Variants -->
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🎨 1. Background Color (Strong Influence)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+              <div style="text-align: center;">
+                <img src="images/variants/bg_blue.png" alt="Blue Background" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Blue (#2196f3)</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/bg_pink.png" alt="Pink Background" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Pink (#e91e63)</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/bg_green.png" alt="Green Background" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Green (#4caf50)</p>
+              </div>
             </div>
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Item Size</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Different size scales</p>
+          </div>
+
+          <!-- 2. Position Variants -->
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">📍 2. Position (Strong Influence)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+              <div style="text-align: center;">
+                <img src="images/variants/pos_header.png" alt="Header Position" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Header Position</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/pos_banner.png" alt="Banner Position" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Banner Position</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/pos_spotlight.png" alt="Spotlight Position" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Spotlight Position</p>
+              </div>
             </div>
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Position</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Spatial positioning</p>
+          </div>
+
+          <!-- 3. Item Size Variants -->
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">📏 3. Item Size (Strong Influence)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+              <div style="text-align: center;">
+                <img src="images/variants/size_small.png" alt="Small Size" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Small (0.8x)</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/size_large.png" alt="Large Size" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Large (1.5x)</p>
+              </div>
             </div>
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Card Clarity</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Visual saliency</p>
+          </div>
+
+          <!-- 4. Card Clarity Variants -->
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="color: var(--primary-color); margin-bottom: 1rem;">🔍 4. Card Clarity (Strong Influence)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+              <div style="text-align: center;">
+                <img src="images/variants/clarity_blur.png" alt="Blurred" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Blur (4px)</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/clarity_sharp.png" alt="Sharp" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Sharp</p>
+              </div>
             </div>
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Font Styling</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Typography changes</p>
+          </div>
+
+          <!-- 5. Font Variants (Minor Influence) -->
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="color: #888; margin-bottom: 1rem;">📝 5. Font Styling (Minor Influence)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+              <div style="text-align: center;">
+                <img src="images/variants/font_comic.png" alt="Comic Font" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0.85;" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Comic Sans</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/font_times.png" alt="Times Font" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0.85;" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Times New Roman</p>
+              </div>
             </div>
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Text Color</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Text appearance</p>
+          </div>
+
+          <!-- 6. Text Color Variants (Minor Influence) -->
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="color: #888; margin-bottom: 1rem;">🎨 6. Text Color (Minor Influence)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+              <div style="text-align: center;">
+                <img src="images/variants/text_red.png" alt="Red Text" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0.85;" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Red Text</p>
+              </div>
+              <div style="text-align: center;">
+                <img src="images/variants/text_blue.png" alt="Blue Text" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0.85;" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Blue Text</p>
+              </div>
             </div>
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Image Clarity</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Visual quality</p>
+          </div>
+
+          <!-- 7. Image Clarity (Minor Influence) -->
+          <div style="margin-bottom: 2.5rem;">
+            <h4 style="color: #888; margin-bottom: 1rem;">🖼️ 7. Image Clarity (Minor Influence)</h4>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+              <div style="text-align: center;">
+                <img src="images/variants/img_blur.png" alt="Blurred Images" style="width: 100%; border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); opacity: 0.85;" />
+                <p style="margin-top: 0.5rem; font-size: 0.9rem; color: var(--text-secondary);">Image Blur (4px)</p>
+              </div>
             </div>
-            <div class="variant-item" style="padding: 1rem; background: white; border-radius: 8px; text-align: center;">
-              <strong style="color: var(--primary-color);">Combinations</strong>
-              <p style="margin: 0.5rem 0 0; font-size: 0.9rem; color: var(--text-secondary);">Multi-attribute</p>
-            </div>
+          </div>
+
+          <!-- Summary Note -->
+          <div style="margin-top: 2rem; padding: 1.5rem; background: white; border-left: 4px solid var(--primary-color); border-radius: 6px;">
+            <p style="margin: 0; font-size: 1rem; line-height: 1.6;">
+              <strong>📊 Note:</strong> Strong influence factors (Background Color, Position, Item Size, Card Clarity) 
+              significantly affect web agent performance, while minor influence factors (Font, Text Color, Image Clarity) 
+              show minimal impact on agent behavior. The 8th family combines multiple attributes.
+            </p>
           </div>
         </div>
       </div>
@@ -188,21 +278,30 @@
     <!-- Results Visualization -->
     <section class="section results-section">
       <div class="container">
-        <h2>Results</h2>
+        <h2>Quantitative Results</h2>
         
-        <!-- Main Results: Success Rate Heatmap -->
-        <div class="result-block">
-          <h3>Variant Success Rate Analysis</h3>
-          <p class="result-intro">
-            Comprehensive analysis showing how different visual attributes affect agent performance 
-            across multiple scenarios (Amazon, Booking, eBay, NPR, Expedia).
-          </p>
-          <div class="pdf-container">
-            <iframe src="images/heatmap_pvalue.pdf" class="pdf-viewer" title="Success Rate Heatmap"></iframe>
-            <p class="pdf-caption">
-              <a href="images/heatmap_pvalue.pdf" target="_blank" class="pdf-link">
-                <i class="fas fa-external-link-alt"></i> Open full resolution PDF
+        <!-- 🎯 Main Results: Success Rate Heatmap (Most Important) -->
+        <div class="result-block" style="background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); padding: 2.5rem; border-radius: 12px; border: 3px solid var(--primary-color); box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+          <div style="text-align: center; margin-bottom: 2rem;">
+            <h3 style="font-size: 2rem; color: var(--primary-color); margin-bottom: 0.5rem;">🎯 Primary Result: Variant Success Rate Heatmap</h3>
+            <p style="font-size: 1.1rem; color: #555; font-weight: 500;">
+              Statistical significance analysis (p-values) showing how visual attributes influence web agent performance
+            </p>
+          </div>
+          <div class="pdf-container" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <iframe src="images/heatmap_pvalue.pdf" class="pdf-viewer" title="Success Rate Heatmap" style="min-height: 700px; border: 2px solid #ddd;"></iframe>
+            <p class="pdf-caption" style="margin-top: 1rem; text-align: center;">
+              <a href="images/heatmap_pvalue.pdf" target="_blank" class="pdf-link" style="font-size: 1.1rem; padding: 0.8rem 1.5rem; background: var(--primary-color); color: white; text-decoration: none; border-radius: 6px; display: inline-block;">
+                <i class="fas fa-external-link-alt"></i> Open Full Resolution PDF
               </a>
+            </p>
+          </div>
+          <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(255,255,255,0.9); border-radius: 6px; border-left: 4px solid #ff6b6b;">
+            <p style="margin: 0; font-size: 0.95rem; line-height: 1.6; color: #333;">
+              <strong>🔬 Key Insight:</strong> This heatmap displays the p-values from statistical tests comparing each variant's 
+              Target Click Rate (TCR) against the original page across 5 websites (Amazon, Booking, eBay, NPR, Expedia) and 4 agents. 
+              Lower p-values (darker colors) indicate stronger statistical significance, revealing which visual attributes 
+              have the most significant impact on agent behavior.
             </p>
           </div>
         </div>
